@@ -10,10 +10,10 @@
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+  # include .bashrc if it exists
+  if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+  fi
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -54,8 +54,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-# autoenv
-# https://github.com/kennethreitz/autoenv
+# autoenv - https://github.com/kennethreitz/autoenv
 # homebrew installs to /usr/local/opt/autoenv
 if [ -f /usr/local/opt/autoenv/activate.sh ]; then
   source /usr/local/opt/autoenv/activate.sh
@@ -64,8 +63,3 @@ fi
 if [ -f /usr/local/bin/activate.sh ]; then
   source /usr/local/bin/activate.sh
 fi
-
-# Ruby RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
