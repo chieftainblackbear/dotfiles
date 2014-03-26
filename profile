@@ -56,8 +56,13 @@ fi
 
 # autoenv
 # https://github.com/kennethreitz/autoenv
+# homebrew installs to /usr/local/opt/autoenv
 if [ -f /usr/local/opt/autoenv/activate.sh ]; then
   source /usr/local/opt/autoenv/activate.sh
+fi
+# pip installs to /usr/local/bin
+if [ -f /usr/local/bin/activate.sh ]; then
+  source /usr/local/bin/activate.sh
 fi
 
 # Ruby RVM
