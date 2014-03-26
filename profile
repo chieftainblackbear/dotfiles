@@ -50,3 +50,11 @@ fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+# Python virtualenvwrapper
+# http://docs.python-guide.org/en/latest/dev/virtualenvs/
+export WORKON_HOME=~/Envs
+#source /usr/local/bin/virtualenvwrapper.sh
+
+# autoenv
+source /usr/local/opt/autoenv/activate.sh
