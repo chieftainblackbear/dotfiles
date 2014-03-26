@@ -47,14 +47,20 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   source /usr/local/git/contrib/completion/git-completion.bash
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
 # Python virtualenvwrapper
 # http://docs.python-guide.org/en/latest/dev/virtualenvs/
 export WORKON_HOME=~/Envs
-#source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # autoenv
-source /usr/local/opt/autoenv/activate.sh
+# https://github.com/kennethreitz/autoenv
+if [ -f /usr/local/opt/autoenv/activate.sh ]; then
+  source /usr/local/opt/autoenv/activate.sh
+fi
+
+# Ruby RVM
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
