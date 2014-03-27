@@ -25,28 +25,30 @@ fi
 PATH=/usr/local/git/bin:$PATH
 export PATH
 
-# set terminal colors
-export CLICOLOR=1
-#export LSCOLORS=GxFxCxDxBxegedabagaced
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-#export LSCOLORS=ExFxBxDxCxegedabagacad
+if [ $(echo $SHELL) = "/bin/bash" ]; then
 
-# color prompt with git
-if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
-  source /usr/local/git/contrib/completion/git-prompt.sh
-  GIT_PS1_SHOWDIRTYSTATE=true
-  #export PS1='[\u@mbp \w$(__git_ps1)]\$ '
-  export PS1="\[\033[0;36m\]\u\[\033[0;37m\]@\[\033[0;32m\]mbp:\[\033[0;33m\]\w\[\033[m\]\[\033[0;36m\]\$(__git_ps1)\[\033[m\]\$ "
-else
-  export PS1="\[\033[0;36m\]\u\[\033[0;37m\]@\[\033[0;32m\]\h:\[\033[0;33m\]\w\[\033[m\]\$ "
-  #export PS1='\[\033[0;32m\]\u@\h\[\033[00m\]:\[\033[0;34m\]\w\[\033[00m\]\$ '
-fi
+  # set terminal colors
+  export CLICOLOR=1
+  #export LSCOLORS=GxFxCxDxBxegedabagaced
+  export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+  #export LSCOLORS=ExFxBxDxCxegedabagacad
+
+  # color prompt with git
+  if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
+    source /usr/local/git/contrib/completion/git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    #export PS1='[\u@mbp \w$(__git_ps1)]\$ '
+    export PS1="\[\033[0;36m\]\u\[\033[0;37m\]@\[\033[0;32m\]mbp:\[\033[0;33m\]\w\[\033[m\]\[\033[0;36m\]\$(__git_ps1)\[\033[m\]\$ "
+  else
+    export PS1="\[\033[0;36m\]\u\[\033[0;37m\]@\[\033[0;32m\]\h:\[\033[0;33m\]\w\[\033[m\]\$ "
+    #export PS1='\[\033[0;32m\]\u@\h\[\033[00m\]:\[\033[0;34m\]\w\[\033[00m\]\$ '
+  fi
 
 # git tab complete
-if [ $(echo $SHELL) = "/bin/bash" ]; then
   if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
     source /usr/local/git/contrib/completion/git-completion.bash
   fi
+
 fi
 
 # Python virtualenvwrapper
