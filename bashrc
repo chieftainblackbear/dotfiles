@@ -20,7 +20,7 @@ alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 
 # Set default provider (VMWare Fusion) for Vagrant
-if [ /usr/bin/vagrant ]; then
+if [ -f /usr/bin/vagrant ]; then
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 fi
 
