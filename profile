@@ -43,13 +43,16 @@ else
 fi
 
 # git tab complete
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  source /usr/local/git/contrib/completion/git-completion.bash
+if [ $(echo $SHELL) = "/bin/bash" ]; then
+  if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+    source /usr/local/git/contrib/completion/git-completion.bash
+  fi
 fi
 
 # Python virtualenvwrapper
 # http://docs.python-guide.org/en/latest/dev/virtualenvs/
-export WORKON_HOME=~/Envs
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Repos
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
