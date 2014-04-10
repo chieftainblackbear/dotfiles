@@ -15,7 +15,7 @@ ZSH_THEME="chieftainblackbear"
 # CASE_SENSITIVE="true"
 
 # Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often to auto-update? (in days)
 # export UPDATE_ZSH_DAYS=13
