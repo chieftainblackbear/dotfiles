@@ -49,6 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [ -f /usr/bin/vagrant ]; then
+	export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 	plugins=(autoenv django git pip sublime vagrant virtualenv virtualenvwrapper zsh-syntax-highlighting)
 else
 	plugins=(autoenv django git pip sublime virtualenv virtualenvwrapper zsh-syntax-highlighting)
