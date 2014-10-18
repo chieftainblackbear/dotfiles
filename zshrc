@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [ -f /usr/bin/vagrant ]; then
-    if [ -f /vmware_fusion ]; then
+    if [ -f "/Applications/VMware Fusion.app/Contents/MacOS/VMware Fusion" ]; then
         export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
     elif [ -f /usr/bin/virtualbox ]; then
         export VAGRANT_DEFAULT_PROVIDER="virtualbox"
