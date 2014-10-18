@@ -49,10 +49,14 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [ -f /usr/bin/vagrant ]; then
-	export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-	plugins=(autoenv django git pip sublime vagrant virtualenv virtualenvwrapper zsh-syntax-highlighting)
+    if [ -f /vmware_fusion ]; then
+        export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+    elif [ -f /usr/bin/virtualbox ]; then
+        export VAGRANT_DEFAULT_PROVIDER="virtualbox"
+    fi
+    plugins=(autoenv django git pip sublime vagrant virtualenv virtualenvwrapper zsh-syntax-highlighting)
 else
-	plugins=(autoenv django git pip sublime virtualenv virtualenvwrapper zsh-syntax-highlighting)
+    plugins=(autoenv django git pip sublime virtualenv virtualenvwrapper zsh-syntax-highlighting)
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -91,15 +95,15 @@ export PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Repos
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  source /usr/local/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 # autoenv - https://github.com/kennethreitz/autoenv
 # homebrew installs to /usr/local/opt/autoenv
 if [ -f /usr/local/opt/autoenv/activate.sh ]; then
-  source /usr/local/opt/autoenv/activate.sh
+    source /usr/local/opt/autoenv/activate.sh
 fi
 # pip installs to /usr/local/bin
 if [ -f /usr/local/bin/activate.sh ]; then
-  source /usr/local/bin/activate.sh
+    source /usr/local/bin/activate.sh
 fi
