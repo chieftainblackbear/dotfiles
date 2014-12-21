@@ -1,8 +1,25 @@
 [user]
-	name = Jared Hanks
-	email = jared.hanks@gmail.com
+    name = Jared Hanks
+    email = jared.hanks@gmail.com
 [core]
-	excludesfile = ~/.gitignore
-	editor = subl -n -w
+    excludesfile = ~/.gitignore
+    editor = subl -n -w
 [push]
-	default = matching
+    default = matching
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
