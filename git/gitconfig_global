@@ -1,0 +1,8 @@
+[user]
+	name = Jared Hanks
+	email = jared.hanks@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	editor = subl -n -w
+[push]
+	default = matching
