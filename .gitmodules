@@ -22,3 +22,6 @@
 	path = oh-my-zsh
 	url = git@github.com:chieftainblackbear/oh-my-zsh.git
 	branch = master
+[submodule "git/gitignore"]
+	path = git/gitignore
+	url = https://github.com/github/gitignore
