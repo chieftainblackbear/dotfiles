@@ -1,8 +1,10 @@
 {
 	"detect_indentation": false,
+	"font_size": 12.0,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Package Control"
 	],
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
