@@ -90,6 +90,10 @@ export PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Ruby RVM
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM function
+
 # Python virtualenvwrapper
 # http://docs.python-guide.org/en/latest/dev/virtualenvs/
 export WORKON_HOME=$HOME/.virtualenvs
