@@ -37,7 +37,7 @@ DISABLE_AUTO_UPDATE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to the command execution time stamp shown 
+# Uncomment following line if you want to the command execution time stamp shown
 # in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
@@ -110,4 +110,9 @@ fi
 # pip installs to /usr/local/bin
 if [ -f /usr/local/bin/activate.sh ]; then
     source /usr/local/bin/activate.sh
+fi
+
+# Java env
+if [ -f /usr/libexec/java_home ]; then
+    export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 fi
