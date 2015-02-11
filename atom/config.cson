@@ -1,0 +1,29 @@
+"*":
+  editor:
+    fontSize: 12
+    showIndentGuide: true
+    preferredLineLength: 240
+    tabLength: 4
+    invisibles: {}
+    showInvisibles: true
+  core:
+    disabledPackages: [
+      "atom-beautify"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "monokai"
+    ]
+    projectHome: "/Users/jaredh/Repos"
+    audioBeep: false
+  "exception-reporting":
+    userId: "b285881e-1724-e698-8e0b-1f76cd514b76"
+  welcome:
+    showOnStartup: false
+  "atom-spotify": {}
+  "atom-beautify":
+    _analyticsUserId: "de7c52b5-d621-4ea2-b687-cc663ce8beb4"
+  atomatigit: {}
+".diff":
+  editor:
+    preferredLineLength: 240
