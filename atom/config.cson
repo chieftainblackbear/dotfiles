@@ -24,6 +24,19 @@
   "atom-beautify":
     _analyticsUserId: "de7c52b5-d621-4ea2-b687-cc663ce8beb4"
   atomatigit: {}
+  "autocomplete-plus": {}
+".text.xml.xsl":
+  editor:
+    preferredLineLength: 240
+".erb.html.text":
+  editor:
+    preferredLineLength: 240
+".text.xml":
+  editor:
+    preferredLineLength: 240
+".ruby.source":
+  editor:
+    preferredLineLength: 240
 ".diff":
   editor:
     preferredLineLength: 240
