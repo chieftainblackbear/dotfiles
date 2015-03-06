@@ -54,9 +54,9 @@ if [ -f /usr/bin/vagrant ]; then
     elif [ -f /usr/bin/virtualbox ]; then
         export VAGRANT_DEFAULT_PROVIDER="virtualbox"
     fi
-    plugins=(autoenv django git mvn pip sublime vagrant virtualenv virtualenvwrapper zsh-syntax-highlighting)
+    plugins=(django git mvn pip sublime vagrant virtualenv virtualenvwrapper zsh-syntax-highlighting)
 else
-    plugins=(autoenv django git mvn pip sublime virtualenv virtualenvwrapper zsh-syntax-highlighting)
+    plugins=(django git mvn pip sublime virtualenv virtualenvwrapper zsh-syntax-highlighting)
 fi
 
 source $ZSH/oh-my-zsh.sh
