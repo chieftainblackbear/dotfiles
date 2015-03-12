@@ -2,3 +2,4 @@ ln -s ~/.dotfiles/Application\ Support/Sublime\ Text\ 2/Packages/User/Preference
 ln -s ~/.dotfiles/git/gitignore_global ~/.gitignore
 ln -s ~/.dotfiles/git/gitconfig_global ~/.gitconfig
 ln -s ~/.dotfiles/atom/* ~/.atom/
+cp -R ~/.dotfiles/Library/Services/StartScreenSaverEngine.workflow ~/Library/Services/StartScreenSaverEngine.workflow
