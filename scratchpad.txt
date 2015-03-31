@@ -3,3 +3,6 @@ ln -s ~/.dotfiles/git/gitignore_global ~/.gitignore
 ln -s ~/.dotfiles/git/gitconfig_global ~/.gitconfig
 ln -s ~/.dotfiles/atom/* ~/.atom/
 cp -R ~/.dotfiles/Library/Services/StartScreenSaverEngine.workflow ~/Library/Services/StartScreenSaverEngine.workflow
+brew install tmux
+brew install reattach-to-user-namespace
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
