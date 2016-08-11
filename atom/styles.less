@@ -8,31 +8,110 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
+ .tree-view {
+   font-size: 12px;
+   .list-item {
+     line-height: 21px !important;
+   }
+   .selected:before, .selected:before {
+     height: 18px !important;
+   }
+   .icon:before {
+     font-size: 11px;
+     width: 10px;
+     height: 10px;
+     opacity: .6;
+     position: relative;
+     top: 0px;
+   }
+   .header:before {
+     font-size: 10px !important;
+     opacity: .6;
+     margin-right: 0px !important;
+   }
+ }
 
-}
+ atom-text-editor::shadow {
 
-// style the background and foreground colors on the atom-text-editor-element
-// itself
-atom-text-editor {
+  .git-commit.line-too-long.deprecated {
+    color: orange;
+    text-decoration: none;
+  }
 
-}
+  .git-commit.line-too-long.illegal {
+    color: #fff;
+    background: #DA2C43;
+    opacity: 0.9;
+  }
 
-// To style other content in the text editor's shadow DOM, use the ::shadow
-// expression
-atom-text-editor::shadow .cursor {
+  .invalid.illegal {
+    color: #fff;
+    background: #DA2C43;
+    opacity: 0.9;
+  }
 
-}
+  .markup.underline.link.hyperlink {
+    color: #F9EE98;
+    text-decoration: underline;
+  }
 
-.editor .git-commit.line-too-long.deprecated {
-  color: orange;
-  text-decoration: none;
-}
+  .gfm {
+    .markup {
+      &.heading {
+        color: #87C38A;
+        font-weight: bold;
+      }
 
-.editor .git-commit.line-too-long.illegal {
-  color: #fff;
-  background: #DA2C43;
-  opacity: 0.1;
+      &.underline {
+        color: #F9EE98;
+        text-decoration: underline;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: #C6C5FE;
+    }
+
+    &.source {
+      color: #DDD;
+    }
+
+    .variable.list {
+      color: #96CBFE;
+      font-weight: bold;
+    }
+
+    .link {
+      color: #CCC;
+
+      .entity {
+        color: #DDD;
+        font-weight: bold;
+      }
+    }
+
+    .emoji {
+      .word {
+        color: #FF73FD;
+      }
+      .start {
+        font-weight: bold;
+        color: #777;
+      }
+      .end {
+        font-weight: bold;
+        color: #777;
+      }
+    }
+  }
 }
 
 .tree-view .entry.directory.status-modified > .header,

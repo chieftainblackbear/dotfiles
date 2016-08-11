@@ -1,34 +1,36 @@
 "*":
-  editor:
-    fontSize: 12
-    showIndentGuide: true
-    preferredLineLength: 240
-    tabLength: 4
-    invisibles: {}
-    showInvisibles: true
+  "atom-beautify":
+    _analyticsUserId: "de7c52b5-d621-4ea2-b687-cc663ce8beb4"
+    general:
+      _analyticsUserId: "47d7b454-8ead-48be-a7b6-ec0e95d72294"
+  "atom-spotify": {}
+  atomatigit: {}
+  "autocomplete-plus": {}
   core:
-    disabledPackages: [
-      "atom-beautify"
-    ]
+    audioBeep: false
+    projectHome: "/Users/jaredh/Repos"
     themes: [
       "atom-dark-ui"
       "monokai"
     ]
-    projectHome: "/Users/jaredh/Repos"
-    audioBeep: false
+  editor:
+    invisibles: {}
+    preferredLineLength: 240
+    showIndentGuide: true
+    tabLength: 4
   "exception-reporting":
     userId: "b285881e-1724-e698-8e0b-1f76cd514b76"
+  linter: {}
+  "linter-xmllint": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "one-dark-ui": {}
   welcome:
     showOnStartup: false
-  "atom-spotify": {}
-  "atom-beautify":
-    _analyticsUserId: "de7c52b5-d621-4ea2-b687-cc663ce8beb4"
-  atomatigit: {}
-  "autocomplete-plus": {}
-".erb.html.text":
+".diff":
   editor:
     preferredLineLength: 240
-".text.xml.xsl":
+".erb.html.text":
   editor:
     preferredLineLength: 240
 ".ruby.source":
@@ -37,6 +39,6 @@
 ".text.xml":
   editor:
     preferredLineLength: 240
-".diff":
+".text.xml.xsl":
   editor:
     preferredLineLength: 240

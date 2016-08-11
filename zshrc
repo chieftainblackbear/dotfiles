@@ -51,7 +51,7 @@ DISABLE_AUTO_UPDATE="true"
 if [ -f /usr/bin/vagrant ]; then
     if [ -f "/Applications/VMware Fusion.app/Contents/MacOS/VMware Fusion" ]; then
         export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-    elif [ -f /usr/bin/virtualbox ]; then
+    elif [ -f "/Applications/VirtualBox.app/Contents/MacOS/VirtualBox" ]; then
         export VAGRANT_DEFAULT_PROVIDER="virtualbox"
     fi
     plugins=(django git mvn pip sublime vagrant virtualenv virtualenvwrapper zsh-syntax-highlighting)
@@ -115,4 +115,14 @@ fi
 # Java env
 if [ -f /usr/libexec/java_home ]; then
     export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+	export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=256m"
 fi
+
+# Starmount variables
+export CATALINA_HOME="$HOME/Repos/Starmount/apache-tomcat-7.0.59"
+export CATALINA_BASE="$HOME/Repos/Starmount/apache-tomcat-7.0.59"
+export CATALINA_OPTS="-Xmx4096m -XX:MaxPermSize=512M"
+export CASSANDRA_HOME="$HOME/Repos/Starmount/apache-cassandra-2.1.4"
+export CONNECT_HOME="$HOME/Repos/Starmount"
+export INVENTORY_HOME="$HOME/Repos/Starmount/inventory-hub"
+export ENACT_HOME="$HOME/Repos/Starmount/enact"
